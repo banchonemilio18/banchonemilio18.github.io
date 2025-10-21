@@ -3,12 +3,16 @@ body {
     color: black;
     margin: 0;
     padding: 2rem;
-    
-
 }
 header, main, footer {
-
+    background-color:beige;
+    color: black;
+    margin: 0;
+    padding: 2rem;
 }
 header{
-
+    background-color:beige;
+    color: black;
+    margin: 0;
+    padding: 2rem;
 }
