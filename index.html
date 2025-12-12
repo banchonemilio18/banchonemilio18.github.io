@@ -3,57 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Emilio Banchon | Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
 
     <header>
-        <h1>Welcome to my Website!</h1>
+        <div class="container">
+            <h1>Welcome to my Website!</h1>
+        </div>
     </header>
 
-    <main>
-        <img src="emilio.jpg" alt="Emilio Banchon Macias" class="profile-pic" width="500" height="550">
-        <div>
-            <h1>About Me</h1>
-            <p>My name is Emilio Banchon and I'm a junior at Stonehill College.</p>
-        </div>
-        <div>
-            <h1>Work Experience</h1>
-            <p>Library Aide - Front Desk</p>
+    <main class="container">
+        <!-- ABOUT SECTION -->
+        <section class="about-section">
+            <!-- LEFT: PROFILE PIC -->
+            <div class="about-left">
+                <img src="emilio.jpg" alt="Emilio Banchon" class="profile-pic">
+            </div>
+
+            <!-- RIGHT: ABOUT TEXT -->
+            <div class="about-right">
+                <h2>About Me</h2>
+                <p>
+                    Hi, I'm <strong>Emilio Banchon</strong>, a junior at <strong>Stonehill College</strong> with a strong
+                    interest in data, technology, and applying my programming knowledge to real-world problems.
+                    I enjoy building projects that combine technical skills with creativity such as data visualizations,
+                    web applications, and machine learning models. Outside the classroom, I serve as <strong>Treasurer</strong> for the ACM Club, where I manage
+                    finances and help organize workshops and guest speakers.
+                </p>
+            </div>
+            <div class="contact-bubbles-horizontal">
+                <a class="contact-bubble email" href="mailto:banchon.emilio@gmail.com">✉️ Email</a>
+                <a class="contact-bubble linkedin" target="_blank"
+                    href="https://www.linkedin.com/in/emilio-banchon-macias-59b66a219/">in LinkedIn</a>
+                <a class="contact-bubble github" target="_blank"
+                    href="https://github.com/banchonemilio18">GitHub</a>
+            </div>
+        </section>
+
+        <!-- WORK EXPERIENCE -->
+        <section>
+            <h2>Work Experience</h2>
+
+            <h3>Library Aide – Front Desk</h3>
             <ul>
-                <li>Assist students with locating resources and answer general inquiries at the front desk or by phone calls</li>
-                <li>Manage circulation tasks such as check out/in library materials and re-shelving books</li>
-                <li>Perform stack maintenance including shelf reading and inventory checks</li>
-                <li>Communicate effectively and courteously with students and maintaining a welcoming environment</li>
+                <li>Assist students with locating resources and answering general inquiries in person and by phone.</li>
+                <li>Manage circulation tasks such as checking materials in/out and re-shelving books.</li>
+                <li>Perform stack maintenance including shelf reading and inventory checks.</li>
+                <li>Maintain a welcoming environment and communicate courteously with students and staff.</li>
             </ul>
-            <p>Intramural Sports Supervisor</p>
+
+            <h3>Intramural Sports Supervisor</h3>
             <ul>
-                <li>Supervise and facilitate intramural sports games by set up, monitor, and breakdown</li>
-                <li>Operate scoreboard, keep track player stats and create social media content to promote events</li>
-                <li>Maintain a fun, safe, and competitive environment for intramural participants</li>
+                <li>Supervise and facilitate intramural sports games, including setup, monitoring, and breakdown.</li>
+                <li>Operate scoreboards, track player statistics, and create social media content to promote events.</li>
+                <li>Ensure a fun, safe, and competitive environment for participants.</li>
             </ul>
-        </div>
-        <div>
-            <p>My Resume  and LinkedIn</p>
-            <p>Check out my Linkedin profile here: <a target="_blank" href="https://www.linkedin.com/in/emilio-banchon-macias-59b66a219/"> LinkedIn </a></p>
-            <p>Here is a copy of my resume: <a target="_blank" href="Banchon_Emilio_Resume_2025.pdf"> Resume </a></p>
-        </div>
-        <div>
-            <h1>Projects</h1>
-            <h2>ArchaeoVault</h2>
-            <p></p>
-            <p>Website Project: <a target="_blank" href="https://archaeovault.alexandrauhl.com/"> ArchaeoVault </a></p>
-            
-            <h2>NBA 2024-2025 Season Visualizations</h2>
-            <p></p>
-            <p>Website Project: <a target="_blank" href="https://stonehill-csc321.github.io/assets/Basketball/index.html"> NBA Visualizations </a></p>
-            
-            <h2>Hate Speech Detector</h2>
-            <p></p>
-            <p>GitHub Repository: <a target="_blank" href="https://github.com/banchonemilio18/Hate-Speech-Detector"> Hate Speech Detector </a></p>
-        </div>
+        </section>
+
+        <!-- RESUME / LINKEDIN -->
+        <section>
+            <h2>My Resume & LinkedIn</h2>
+            <p>
+                LinkedIn:
+                <a target="_blank" href="https://www.linkedin.com/in/emilio-banchon-macias-59b66a219/">Visit my profile</a>
+            </p>
+            <p>
+                Resume:
+                <a target="_blank" href="Banchon_Emilio_Resume_2025.pdf">Download my resume</a>
+            </p>
+        </section>
+
+        <!-- PROJECTS -->
+        <section>
+            <h2>Projects</h2>
+
+            <div class="project-card">
+                <h3>ArchaeoVault</h3>
+                <p>
+                    Interactive archaeological displays accessed via QR codes at real dig sites in Rhode Island.
+                    Built with React, SQL, and APIs to simulate real-world software engineering workflows.
+                </p>
+                <p><a target="_blank" href="https://archaeovault.alexandrauhl.com/">View project</a></p>
+            </div>
+
+            <div class="project-card">
+                <h3>NBA 2024–2025 Visualizations</h3>
+                <p>
+                    Interactive Vega visualizations analyzing NBA statistics to highlight team and player performance.
+                </p>
+                <p><a target="_blank" href="https://stonehill-csc321.github.io/assets/Basketball/index.html">View visualizations</a></p>
+            </div>
+
+            <div class="project-card">
+                <h3>Hate Speech Detector</h3>
+                <p>
+                    Built and compared Naive Bayes and Random Forest classifiers (95% vs 82% accuracy) to detect hate speech.
+                    Includes an interactive Python script where users can input text and see predictions.
+                </p>
+                <p><a target="_blank" href="https://github.com/banchonemilio18/Hate-Speech-Detector">View repo</a></p>
+            </div>
+        </section>
     </main>
-</head>
-<body>
-    
+
+    <footer>
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> Emilio Banchon</p>
+        </div>
+        <script>
+            document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
+    </footer>
+
 </body>
 </html>

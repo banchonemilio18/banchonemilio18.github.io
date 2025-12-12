@@ -1,38 +1,210 @@
-body {
-    background-color:beige;
-    color: black;
+/* Global reset-ish */
+* {
+    box-sizing: border-box;
     margin: 0;
-    padding: 2rem;
+    padding: 0;
 }
-.header-container {
-    background-color:beige;
-    align-items: center;
-    color: black;
-    margin: 0;
-    padding: 2rem;
-} 
 
-main, footer {
-    background-color:beige;
+body {
+    background-color: rgb(255, 255, 255);
     color: black;
-    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Layout container */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
     padding: 2rem;
 }
-.profile-pic{
+
+/* Header */
+header {
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid #e5e7eb;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+/* Main + footer background */
+main, footer {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+/* About section */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;  /* centers both columns */
+    gap: 60px;                /* space between picture and text */
+    margin: 3rem 0;
+    flex-wrap: wrap;          /* stack on small screens */
+}
+
+/* Left column: image */
+.about-left {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-pic {
     width: 300px;
     height: 300px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #d4c28a;
+    border: 4px solid #c5c4c4;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-.profile-pic:hover{
-    transform: scale(1.05);
     transition: transform 0.3s ease;
 }
-header{
-    background-color:beige;
-    color: black;
-    margin: 0;
-    padding: 2rem;
+
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+/* Right column: About Me text */
+.about-right {
+    max-width: 550px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.about-right h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* Horizontal contact bubbles */
+.contact-bubbles-horizontal {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+    width: 100%;
+}
+
+.contact-bubble {
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    border: 1px solid #d1d5db;
+    background-color: #f9fafb;
+    color: #111827;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: 0.2s ease;
+    white-space: nowrap; /* prevents bubble text from breaking */
+}
+
+.contact-bubble:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+.contact-bubble.email:hover {
+    background-color: #f97316;
+    color: white;
+    border-color: #ea580c;
+}
+
+.contact-bubble.linkedin:hover {
+    background-color: #0a66c2;
+    color: white;
+    border-color: #0a66c2;
+}
+
+.contact-bubble.github:hover {
+    background-color: #111827;
+    color: white;
+    border-color: #111827;
+}
+
+/* Sections */
+main section {
+    margin-bottom: 2.5rem;
+}
+
+main h2 {
+    margin-bottom: 0.75rem;
+}
+
+main h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+ul {
+    margin-left: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+ul li {
+    margin-bottom: 0.3rem;
+}
+
+/* Project cards */
+.project-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.3rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.project-card h3 {
+    margin-bottom: 0.4rem;
+}
+
+.project-card p {
+    margin-bottom: 0.4rem;
+}
+
+/* Links */
+a {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid #e5e7eb;
+    padding: 1rem 0 2rem;
+    text-align: center;
+    color: #6b7280;
+}
+
+.footer-inner {
+    padding-top: 0;
+}
+
+/* Responsive tweaks */
+@media (max-width: 700px) {
+    .about-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .about-right {
+        text-align: center;
+    }
+
+    .profile-pic {
+        width: 230px;
+        height: 230px;
+    }
 }
